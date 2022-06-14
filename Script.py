@@ -5,6 +5,10 @@ page = 'https://www.weather.go.kr/w/wnuri-fct2021/main/current-weather.do?code=4
 response = requests.get(page)
 soup = bs(response.content, 'html.parser')
 
+# 업데이트 일시
+Update = soup.select('.cmp-cmn-para > a.updated-at > span')
+print(Update[0].text)
+
 # 현재 날씨
 # 온도
 Temp = soup.select('.cmp-cur-weather > ul.wrap-1 > li > span')
