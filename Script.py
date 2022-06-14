@@ -35,6 +35,3 @@ def SelectWeather():
     Weather += str(SunriseAndSunset) + "\n"
 
     return Weather
-
-
-SelectWeather()
