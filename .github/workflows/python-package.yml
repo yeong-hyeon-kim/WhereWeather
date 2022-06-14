@@ -31,4 +31,4 @@ jobs:
       run: |
         python Script.py
       env:
-          MY_GITHUB_TOKEN: \$
+          MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
