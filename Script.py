@@ -21,7 +21,7 @@ def SelectWeather():
 
     # 일출/일몰
     SunriseAndSunset = soup.select('.cmp-cur-weather > ul.wrap-3 > li > span')
-    print("🌅 : " + SunriseAndSunset[0].text + " " + SunriseAndSunset[1].text + " " +
+    print("🌄 : " + SunriseAndSunset[0].text + " " + SunriseAndSunset[1].text + " 🌅 " +
           SunriseAndSunset[2].text + " " + SunriseAndSunset[3].text)
 
     # 기상특보
