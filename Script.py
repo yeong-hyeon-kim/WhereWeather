@@ -9,29 +9,35 @@ def SelectWeather():
 
     # 업데이트 일시
     Update = soup.select('.cmp-cmn-para > a.updated-at > span')
-    print("📆 : " + Update[0].text)
+    UpdateContent = "📆 : " + Update[0].text
+    print(UpdateContent)
 
     # 온도
     Temp = soup.select('.cmp-cur-weather > ul.wrap-1 > li > span.tmp')
-    print("🌡  : " + Temp[0].contents[0] + "℃")
+    TempContent = "🌡  : " + Temp[0].contents[0] + "℃"
+    print(TempContent)
 
     # 습도
     Humid = soup.select('.cmp-cur-weather > ul.wrap-2 > li > span')
-    print("💧 : " + Humid[0].text + Humid[1].text)
+    HumidContent = "💧 : " + Humid[0].text + Humid[1].text
+    print(HumidContent)
 
     # 일출/일몰
     SunriseAndSunset = soup.select('.cmp-cur-weather > ul.wrap-3 > li > span')
-    print("🌄 : " + SunriseAndSunset[0].text + " " + SunriseAndSunset[1].text + " 🌅 " +
-          SunriseAndSunset[2].text + " " + SunriseAndSunset[3].text)
+    SunriseAndSunsetContent = "🌄 : " + \
+        SunriseAndSunset[0].text + " " + SunriseAndSunset[1].text + \
+        " 🌅 " + SunriseAndSunset[2].text + " " + SunriseAndSunset[3].text
+    print(SunriseAndSunsetContent)
 
     # 기상특보
-    impact = soup.select('.cmp-impact-fct > p')
-    print(impact[0].text)
+    Impact = soup.select('.cmp-impact-fct > p')
+    ImpactContent = "📢 : " + Impact[0].text
+    print(ImpactContent)
 
     Weather = ""
-    Weather += str(Update) + "\n"
-    Weather += str(Temp) + "\n"
-    Weather += str(Humid) + "\n"
-    Weather += str(SunriseAndSunset) + "\n"
+    Weather += str(UpdateContent) + "\n"
+    Weather += str(TempContent) + "\n"
+    Weather += str(HumidContent) + "\n"
+    Weather += str(SunriseAndSunsetContent) + "\n"
 
     return Weather
