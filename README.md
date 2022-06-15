@@ -16,6 +16,18 @@
 
 ## 💡 사용법(Tip)
 
+1. Personal access token을(<https://github.com/settings/tokens>) 생성합니다.
+2. 레포지토리에서 `Settings/Secrets/Actions/New` 순서로 Secrets을 생성합니다.
+  ![New Secret](/img/New%20Secret.PNG)
+
+* `Name` : `Alias`
+* `Value` : `Personal access token`
+
+3. Action/New workflow에서 `set up a workflow yourself` 또는 템플릿을 선택합니다.
+
+4. [`Weather-Issues`](/.github/workflows/Weather-Issues.yml) 참고하여 생성합니다.
+    * 주기는 크론식으로 지정합니다.
+
 ## 💻 개발 환경(Develop Environment)
 
 ### 세부 환경(Environment Detail)
@@ -27,3 +39,6 @@
 * ✔ Dependency : [`requirements`](/requirements.txt)
 
 ## 📖 비고(Remark)
+* Action Workflow
+  * [`Weather-Issues`](/.github/workflows/Weather-Issues.yml)
+  * [`start-python-package`](/.github/workflows/start-python-package.yml)
