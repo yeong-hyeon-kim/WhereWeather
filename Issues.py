@@ -20,7 +20,7 @@ if __name__ == "__main__":
     repository_name = "WhereWeather"
     seoul_timezone = timezone('Asia/Seoul')
     today = datetime.now(seoul_timezone)
-    today_date = today.strftime("%Y년 %m월 %d일 %HH시 %M분")
+    today_date = today.strftime("%Y년 %m월 %d일 %H시 %M분")
 
     issue_title = "[" + today_date + "] 🏝 독도 날씨"
     upload_contents = SelectWeather()
