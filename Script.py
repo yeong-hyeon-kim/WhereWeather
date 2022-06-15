@@ -39,5 +39,6 @@ def SelectWeather():
     Weather += str(TempContent) + "\n"
     Weather += str(HumidContent) + "\n"
     Weather += str(SunriseAndSunsetContent) + "\n"
+    Weather += str(ImpactContent) + "\n"
 
     return Weather
