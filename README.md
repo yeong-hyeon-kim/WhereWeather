@@ -6,18 +6,18 @@
 
 ## 🏷️ 기능(Function)
 
-1. [날씨 정보 알림](#날씨-정보-알림)
+1. [날씨 알림](#날씨-정보-알림)
 
 ### 세부 기능(Function Detail)
 
-#### 기상 정보 알림
+#### 날씨 알림
 
    1. 특정 주기로 날씨 정보를 조회하여 이슈로 등록합니다.
 
 ## 💡 사용법(Tip)
 
 1. Personal access token을(<https://github.com/settings/tokens>) 생성합니다.
-2. 레포지토리에서 `Settings/Secrets/Actions/New` 순서로 Secrets을 생성합니다.
+2. 레포지토리에서 `Settings > Secrets > Actions > New` 순서로 Secrets을 생성합니다.
   ![New Secret](/img/New%20Secret.PNG)
 
 * `Name` : `Alias`
@@ -42,3 +42,5 @@
 * Action Workflow
   * [`Weather-Issues`](/.github/workflows/Weather-Issues.yml)
   * [`start-python-package`](/.github/workflows/start-python-package.yml)
+* 환경변수
+  * 'MY_GITHUB_TOKEN' : `Settings > Secrets`
