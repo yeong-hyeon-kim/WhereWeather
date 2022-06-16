@@ -2,8 +2,9 @@ import requests
 from bs4 import BeautifulSoup as bs
 
 
-def SelectWeather():
-    page = 'https://www.weather.go.kr/w/wnuri-fct2021/main/current-weather.do?code=4794033000&unit=m%2Fs&aws=N#refresh'
+def SelectWeather(LocalCode):
+    page = 'https://www.weather.go.kr/w/wnuri-fct2021/main/current-weather.do?code=' + \
+        str(LocalCode) + '&unit=m%2Fs&aws=N#refresh'
     response = requests.get(page)
     soup = bs(response.content, 'html.parser')
 

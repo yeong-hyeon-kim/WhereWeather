@@ -22,8 +22,8 @@ if __name__ == "__main__":
     today = datetime.now(seoul_timezone)
     today_date = today.strftime("%Y년 %m월 %d일 %H시 %M분")
 
-    issue_title = "[" + today_date + "] 🏝 독도 날씨"
-    upload_contents = SelectWeather()
+    issue_title = "[" + today_date + "] 🏝 제주도 날씨"
+    upload_contents = SelectWeather("5011063000")
     repo = get_github_repo(
         access_token, repository_name)
     upload_github_issue(repo, issue_title, upload_contents)
