@@ -15,12 +15,12 @@ def SelectWeather(LocalCode):
 
     # 온도
     Temp = soup.select('.cmp-cur-weather > ul.wrap-1 > li > span.tmp')
-    TempContent = "🌡 : " + Temp[0].contents[0] + "℃"
+    TempContent = "🌡 :  " + Temp[0].contents[0] + "℃"
     print(TempContent)
 
     # 습도
     Humid = soup.select('.cmp-cur-weather > ul.wrap-2 > li > span')
-    HumidContent = "💧  : " + Humid[0].text + Humid[1].text
+    HumidContent = "💧  :  " + Humid[0].text + Humid[1].text
     print(HumidContent)
 
     # 일출/일몰
