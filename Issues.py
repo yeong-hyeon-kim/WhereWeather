@@ -19,6 +19,7 @@ def upload_github_issue(repo, title, body):
 def update_gist(access_token, gist_id, title, content):
     g = Github(access_token)
     gist = g.get_gist(gist_id)
+    # Gits Contents
     data = {"Gist": github.InputFileContent(content, title)}
     gist.edit(files=data)
 
