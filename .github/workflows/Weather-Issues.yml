@@ -5,7 +5,7 @@ name: WeatherIssues
 
 on:
   schedule:
-      - cron: '30 * * * *'
+      - cron: '* * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
