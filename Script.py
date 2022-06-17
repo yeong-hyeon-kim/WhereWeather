@@ -20,7 +20,7 @@ def SelectWeather(LocalCode):
 
     # 습도
     Humid = soup.select('.cmp-cur-weather > ul.wrap-2 > li > span')
-    HumidContent = "💧  :  " + Humid[0].text + Humid[1].text
+    HumidContent = "💧 : " + Humid[0].text + Humid[1].text
     print(HumidContent)
 
     # 일출/일몰
