@@ -28,3 +28,5 @@ jobs:
         python Issues.py
       env:
           MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
+
