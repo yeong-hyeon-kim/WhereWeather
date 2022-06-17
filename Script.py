@@ -23,6 +23,15 @@ def SelectWeather(LocalCode):
     HumidContent = "💧 : " + Humid[0].text + Humid[1].text
     print(HumidContent)
 
+    # 대기질
+
+    Air = soup.select('.cmp-cur-weather > ul.wrap-2 > li > strong > span')
+    AirContent = "🌬  : 초미세먼지(PM2.5) " + Air[0].text + "(" + Air[1].text + ")" + \
+        ", 미세먼지(PM10) " + Air[2].text + "(" + Air[3].text + ")" + \
+        ", 오존(O3) " + Air[4].text + "(" + Air[5].text + ")"
+    AirContent = AirContent.replace("범례보기", "")
+    print(AirContent)
+
     # 일출/일몰
     SunriseAndSunset = soup.select('.cmp-cur-weather > ul.wrap-3 > li > span')
     SunriseAndSunsetContent = "🌄 : " + \
@@ -39,6 +48,7 @@ def SelectWeather(LocalCode):
     Weather += str(UpdateContent) + "\n"
     Weather += str(TempContent) + "\n"
     Weather += str(HumidContent) + "\n"
+    Weather += str(AirContent) + "\n"
     Weather += str(SunriseAndSunsetContent) + "\n"
     Weather += str(ImpactContent) + "\n"
 
