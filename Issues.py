@@ -35,7 +35,7 @@ if __name__ == "__main__":
     upload_contents = SelectWeather("5011063000")
     repo = get_github_repo(access_token, repository_name)
 
-    update_gist(access_token, "제주, 푸픈 바당 🌊", upload_contents)
+    update_gist(access_token, gist_id, "제주, 푸픈 바당 🌊", upload_contents)
     print("Update Github Gist Success!")
 
     upload_github_issue(repo, issue_title, upload_contents)
