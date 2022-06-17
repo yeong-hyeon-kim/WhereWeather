@@ -17,7 +17,7 @@
 
 #### 날씨 Gist 등록
    1. 특정 주기로 날씨 정보를 조회하여 Gist를 업데이트합니다.
-
+   ![Pinned](/img/Pinned-JejuPureunBadand.PNG)
 
 ## 💡 사용법(Tip)
 
@@ -25,8 +25,7 @@
 2. 레포지토리에서 `Settings > Secrets > Actions > New` 순서로 Secrets을 생성합니다.
   ![New Secret](/img/New%20Secret.PNG)
 
-* `Name` : `Alias`
-* `Value` : `Personal access token`
+* [Secrets 참고](#환경변수env)
 
 3. Action/New workflow에서 `set up a workflow yourself` 또는 템플릿을 선택합니다.
 
@@ -47,6 +46,8 @@
 * Action Workflow
   * [`Weather-Issues`](/.github/workflows/Weather-Issues.yml)
   * [`start-python-package`](/.github/workflows/start-python-package.yml)
-* 환경변수
+
+### 환경변수(Env.)
+
   * `MY_GITHUB_TOKEN` : `Personal access tokens`
   * `GIST_ID` : <https://gist.github.com/{UserName}/{GIST_ID}>
