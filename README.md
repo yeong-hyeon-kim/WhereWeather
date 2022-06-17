@@ -27,7 +27,7 @@
 
 * [Secrets 참고](#환경변수env)
 
-3. Action/New workflow에서 `set up a workflow yourself` 또는 템플릿을 선택합니다.
+3. Action > New workflow에서 `set up a workflow yourself` 또는 템플릿을 선택합니다.
 
 4. [`Weather-Issues`](/.github/workflows/Weather-Issues.yml) 참고하여 생성합니다.
     * 주기는 크론식으로 지정합니다.
@@ -50,4 +50,4 @@
 ### 환경변수(Env.)
 
   * `MY_GITHUB_TOKEN` : `Personal access tokens`
-  * `GIST_ID` : <https://gist.github.com/{UserName}/{GIST_ID}>
+  * `GIST_ID` : `Gist ID`
