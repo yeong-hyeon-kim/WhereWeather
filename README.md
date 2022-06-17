@@ -43,4 +43,5 @@
   * [`Weather-Issues`](/.github/workflows/Weather-Issues.yml)
   * [`start-python-package`](/.github/workflows/start-python-package.yml)
 * 환경변수
-  * 'MY_GITHUB_TOKEN' : `Settings > Secrets`
+  * `MY_GITHUB_TOKEN` : `Personal access tokens`
+  * `GIST_ID` : <https://gist.github.com/{UserName}/{GIST_ID}>
