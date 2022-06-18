@@ -15,7 +15,7 @@ def SelectWeather(LocalCode):
 
     # 온도
     Temp = soup.select('.cmp-cur-weather > ul.wrap-1 > li > span.tmp')
-    TempContent = "🌡️ :  " + Temp[0].contents[0] + "℃"
+    TempContent = "🌡️ : " + Temp[0].contents[0] + "℃"
     print(TempContent)
 
     # 습도
@@ -25,9 +25,9 @@ def SelectWeather(LocalCode):
 
     # 대기질
     Air = soup.select('.cmp-cur-weather > ul.wrap-2 > li > strong > span')
-    AirContent = "🍃 : PM2.5-" + Air[0].text + "-" + Air[1].text + \
-        ",PM10-" + Air[2].text + "-" + Air[3].text + \
-        ",O3-" + Air[4].text + "-" + Air[5].text
+    AirContent = "🍃 : PM2.5:" + Air[0].text + "-" + Air[1].text + \
+        ",PM10:" + Air[2].text + "-" + Air[3].text + \
+        ",O₃:" + Air[4].text + "-" + Air[5].text
     AirContent = AirContent.replace("범례보기", "")
     print(AirContent)
 
