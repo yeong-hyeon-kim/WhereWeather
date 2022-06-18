@@ -15,13 +15,17 @@ def SelectWeather(LocalCode):
 
     # 온도
     Temp = soup.select('.cmp-cur-weather > ul.wrap-1 > li > span.tmp')
-    TempContent = "🌡️ : " + Temp[0].contents[0] + "℃"
+    TempContent = "🌡️  : " + Temp[0].contents[0] + "℃"
     print(TempContent)
 
-    # 습도
-    Humid = soup.select('.cmp-cur-weather > ul.wrap-2 > li > span')
-    HumidContent = "💧 : " + Humid[0].text + Humid[1].text
+    # 습도, 바람, 1시간강수량
+    CurrentWeather = soup.select('.cmp-cur-weather > ul.wrap-2 > li > span')
+    HumidContent = "💧 : " + CurrentWeather[0].text + CurrentWeather[1].text
+    WindContent  = "🌫️  : " + CurrentWeather[2].text + CurrentWeather[3].text
+    RainContent  = "☔ : " + CurrentWeather[4].text + " " + CurrentWeather[5].text
     print(HumidContent)
+    print(WindContent)
+    print(RainContent)
 
     # 대기질
     Air = soup.select('.cmp-cur-weather > ul.wrap-2 > li > strong > span')
@@ -47,8 +51,12 @@ def SelectWeather(LocalCode):
     Weather += str(UpdateContent) + "\n"
     Weather += str(TempContent) + "\n"
     Weather += str(HumidContent) + "\n"
+    Weather += str(WindContent) + "\n"
+    Weather += str(RainContent) + "\n"
     Weather += str(AirContent) + "\n"
     Weather += str(SunriseAndSunsetContent) + "\n"
     Weather += str(ImpactContent) + "\n"
 
     return Weather
+
+SelectWeather(5013052000)
