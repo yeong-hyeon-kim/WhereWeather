@@ -52,11 +52,9 @@ def SelectWeather(LocalCode):
     Weather += str(TempContent) + "\n"
     Weather += str(HumidContent) + "\n"
     Weather += str(WindContent) + "\n"
-    # Weather += str(RainContent) + "\n"
-    # Weather += str(AirContent) + "\n"
     Weather += str(SunriseAndSunsetContent) + "\n"
-    # Weather += str(ImpactContent) + "\n"
+    Weather += str(RainContent) + "\n"
+    Weather += str(AirContent) + "\n"
+    Weather += str(ImpactContent) + "\n"
 
     return Weather
-
-SelectWeather(5013052000)
