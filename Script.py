@@ -2,14 +2,25 @@ import requests
 from bs4 import BeautifulSoup as bs
 
 
-def SelectWeather(LocalCode):
+def RefreshWeather(LocalCode):
     page = 'https://www.weather.go.kr/w/wnuri-fct2021/main/current-weather.do?code=' + \
         str(LocalCode) + '&unit=m%2Fs&aws=N#refresh'
     response = requests.get(page)
     soup = bs(response.content, 'html.parser')
 
+    return soup
+
+
+def SelectWeather(LocalCode):
+    soup = RefreshWeather(LocalCode)
+
     # 업데이트 일시
     Update = soup.select('.cmp-cmn-para > a.updated-at > span')
+
+    # 알수 없는 페이지 에러 발생 시 재조회
+    if len(Update) == 0:
+        soup = RefreshWeather(LocalCode)
+
     UpdateContent = "📆 : " + Update[0].text
     print(UpdateContent)
 
@@ -21,8 +32,8 @@ def SelectWeather(LocalCode):
     # 습도, 바람, 1시간강수량
     CurrentWeather = soup.select('.cmp-cur-weather > ul.wrap-2 > li > span')
     HumidContent = "💧 : " + CurrentWeather[0].text + CurrentWeather[1].text
-    WindContent  = "🍃 : " + CurrentWeather[2].text + CurrentWeather[3].text
-    RainContent  = "☔ : " + CurrentWeather[4].text + " " + CurrentWeather[5].text
+    WindContent = "🍃 : " + CurrentWeather[2].text + CurrentWeather[3].text
+    RainContent = "☔ : " + CurrentWeather[4].text + " " + CurrentWeather[5].text
     print(HumidContent)
     print(WindContent)
     # print(RainContent)
