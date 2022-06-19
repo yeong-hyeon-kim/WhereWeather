@@ -32,8 +32,8 @@ def SelectWeather(LocalCode):
     # 습도, 바람, 1시간강수량
     CurrentWeather = soup.select('.cmp-cur-weather > ul.wrap-2 > li > span')
     HumidContent = "💧 : " + CurrentWeather[0].text + CurrentWeather[1].text
-    WindContent = "🍃 : " + CurrentWeather[2].text + CurrentWeather[3].text
-    RainContent = "☔ : " + CurrentWeather[4].text + " " + CurrentWeather[5].text
+    WindContent = "🍃  : " + CurrentWeather[2].text + CurrentWeather[3].text
+    RainContent = "☔  : " + CurrentWeather[4].text + " " + CurrentWeather[5].text
     print(HumidContent)
     print(WindContent)
     # print(RainContent)
