@@ -2,7 +2,8 @@
 
 ### WhereWeather
 
-* `GitHub` `Action`을 이용하여 `Issue`에 날씨 정보를 등록합니다.
+* `GitHub` `Action`을 이용하여 `Issue` 및 `Gist`에 날씨 정보를 등록합니다.
+* 나만의 GitHub Pin을 표시합니다.
 
 ## 🏷️ 기능(Function)
 
