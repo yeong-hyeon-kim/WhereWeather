@@ -56,7 +56,8 @@ def SelectWeather(LocalCode):
 
     # 기상특보
     Impact = soup.select('.cmp-impact-fct > p')
-    ImpactContent = "📢 : " + Impact[0].text
+    ImpactContent = "📢 : " + \
+        Impact[0].text.replace("\n", "")
     print(ImpactContent)
 
     Weather = ""
