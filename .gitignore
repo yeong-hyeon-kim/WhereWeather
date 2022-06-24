@@ -1,2 +1,4 @@
 #History
 .history
+#Cache
+__pycache__
