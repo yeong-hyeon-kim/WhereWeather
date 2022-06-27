@@ -29,4 +29,6 @@ jobs:
       env:
           MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
+          GIST_NAME: ${{ secrets.GIST_NAME }}
+          REG_CODE: ${{ secrets.REG_CODE }}
 
