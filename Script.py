@@ -41,9 +41,9 @@ def SelectWeather(LocalCode):
 
     # 대기질
     Air = soup.select('.cmp-cur-weather > ul.wrap-2 > li > strong > span')
-    AirContent = "🍃 : PM2.5:" + Air[0].text + "-" + Air[1].text + \
-        ",PM10:" + Air[2].text + "-" + Air[3].text + \
-        ",O₃:" + Air[4].text + "-" + Air[5].text
+    AirContent = "🍃 : 초미세먼지(PM2.5) : " + Air[0].text + "-" + Air[1].text + \
+        ", 미세먼지(PM10) :" + Air[2].text + "-" + Air[3].text + \
+        ", 오존(O₃) : " + Air[4].text + "-" + Air[5].text
     AirContent = AirContent.replace("범례보기", "")
     print(AirContent)
 
