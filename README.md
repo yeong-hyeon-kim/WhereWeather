@@ -26,7 +26,7 @@
 2. 레포지토리에서 `Settings > Secrets > Actions > New` 순서로 Secrets을 생성합니다.
   ![New Secret](/img/New%20Secret.PNG)
 
-* [Secrets 참고](#환경변수env)
+* [Secrets 참고](#환경변수Environment-Variable)
 
 3. Action > New workflow에서 `set up a workflow yourself` 또는 템플릿을 선택합니다.
 
@@ -48,7 +48,7 @@
   * [`Weather-Issues`](/.github/workflows/Weather-Issues.yml)
   * [`start-python-package`](/.github/workflows/start-python-package.yml)
 
-### 환경변수(Env.)
+### 환경변수(Environment Variable)
 
   * `MY_GITHUB_TOKEN` : `Personal access tokens`
   * `GIST_ID` : `Gist ID`
