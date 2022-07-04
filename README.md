@@ -14,23 +14,24 @@
 
 #### 날씨 이슈 등록
 
-   1. 특정 주기로 날씨 정보를 조회하여 이슈로 등록합니다.
+1. 특정 주기로 날씨 정보를 조회하여 이슈로 등록합니다.
 
 #### 날씨 Gist 등록
-   1. 특정 주기로 날씨 정보를 조회하여 Gist를 업데이트합니다.
-   ![Pinned](/img/Pinned-JejuPureunBadand.PNG)
+
+1. 특정 주기로 날씨 정보를 조회하여 Gist를 업데이트합니다.
+![Pinned](/img/Pinned-JejuPureunBadand.PNG)
 
 ## 💡 사용법(Tip)
 
-1. Personal access token을(<https://github.com/settings/tokens>) 생성합니다.
-2. 레포지토리에서 `Settings > Secrets > Actions > New` 순서로 Secrets을 생성합니다.
+1.Personal access token을(<https://github.com/settings/tokens>) 생성합니다.
+2.레포지토리에서 `Settings > Secrets > Actions > New` 순서로 Secrets을 생성합니다.
   ![New Secret](/img/New%20Secret.PNG)
 
 * [Secrets 참고](#환경변수Environment-Variable)
 
-3. Action > New workflow에서 `set up a workflow yourself` 또는 템플릿을 선택합니다.
+3.Action > New workflow에서 `set up a workflow yourself` 또는 템플릿을 선택합니다.
 
-4. [`Weather-Issues`](/.github/workflows/Weather-Issues.yml) 참고하여 생성합니다.
+4.[`Weather-Issues`](/.github/workflows/Weather-Issues.yml) 참고하여 생성합니다.
     * 주기는 크론식으로 지정합니다.
 
 ## 💻 개발 환경(Develop Environment)
@@ -50,11 +51,12 @@
 
 ### 환경변수(Environment Variable)
 
-  * `MY_GITHUB_TOKEN` : `Personal access tokens`
-  * `GIST_ID` : `Gist ID`
-  * `GIST_NAME` : 이슈 및 Gist 명칭
-  * `REG_CODE` : 법정동 코드
-    |주요 도시|코드|
+* `MY_GITHUB_TOKEN` : `Personal access tokens`
+* `GIST_ID` : `Gist ID`
+* `GIST_NAME` : 이슈 및 Gist 명칭
+* `REG_CODE` : 지역(도시) 코드
+
+    |도시|지역(도시) 코드|
     |--|--|
     |강릉|4215036027|
     |광주|2917060200|
@@ -81,3 +83,4 @@
     |홍성|4480025600|
     |흑산도|4691036000|
   * 세부 지역은 <https://www.code.go.kr/stdcode/regCodeL.do> 에서 확인할 수 있습니다.
+  
