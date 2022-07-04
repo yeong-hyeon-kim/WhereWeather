@@ -24,8 +24,9 @@
 ## 💡 사용법(Tip)
 
 1.Personal access token을(<https://github.com/settings/tokens>) 생성합니다.
+
 2.레포지토리에서 `Settings > Secrets > Actions > New` 순서로 Secrets을 생성합니다.
-  ![New Secret](/img/New%20Secret.PNG)
+![New Secret](/img/New%20Secret.PNG)
 
 * [Secrets 참고](#환경변수Environment-Variable)
 
@@ -83,4 +84,3 @@
     |홍성|4480025600|
     |흑산도|4691036000|
   * 세부 지역은 <https://www.code.go.kr/stdcode/regCodeL.do> 에서 확인할 수 있습니다.
-  
