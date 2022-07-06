@@ -83,4 +83,4 @@
     |포항|4711155000|
     |홍성|4480025600|
     |흑산도|4691036000|
-  * 세부 지역은 <https://www.code.go.kr/stdcode/regCodeL.do> 에서 확인할 수 있습니다.
+  * 세부 지역은 [행정표준코드관리시스템](https://www.code.go.kr/stdcode/regCodeL.do) 에서 확인할 수 있습니다.
