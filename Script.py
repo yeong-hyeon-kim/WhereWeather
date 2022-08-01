@@ -26,12 +26,12 @@ def SelectWeather(LocalCode):
 
     # 온도
     Temp = soup.select('.cmp-cur-weather > ul.wrap-1 > li > span.tmp')
-    TempContent = "🌡️  : " + Temp[0].contents[0] + "℃"
+    TempContent = "🌡️ : " + Temp[0].contents[0] + "℃"
     print(TempContent)
 
     # 습도, 바람, 1시간강수량
     CurrentWeather = soup.select('.cmp-cur-weather > ul.wrap-2 > li > span')
-    HumidContent = "💧  : " + CurrentWeather[0].text + CurrentWeather[1].text
+    HumidContent = "💧 : " + CurrentWeather[0].text + CurrentWeather[1].text
     WindContent = "🍃 : " + CurrentWeather[2].text + CurrentWeather[3].text
     RainContent = "☔ : " + \
         CurrentWeather[4].text + " " + CurrentWeather[5].text
