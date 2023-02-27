@@ -1,6 +1,6 @@
-## 📕 프로젝트 개요(Introduce Project)
+# 📕 프로젝트 개요(Introduce Project)
 
-### WhereWeather
+## WhereWeather
 
 * `GitHub` `Action`을 이용하여 `Issue` 및 `Gist`에 날씨 정보를 등록합니다.
 * 나만의 GitHub Pin을 표시합니다.
@@ -8,7 +8,7 @@
 ## 🏷️ 기능(Function)
 
 1. [날씨 이슈 등록](#날씨-이슈-등록)
-1. [날씨 Gist 업데이트](#날씨-Gist-등록)
+2. [날씨 Gist 업데이트](#날씨-Gist-등록)
 
 ### 세부 기능(Function Detail)
 
